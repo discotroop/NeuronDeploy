@@ -34,18 +34,14 @@ mongoose
   .then(res => console.log("success, connnected to db"))
   .catch(err => console.log(err));
 
+// pull in client from the build folder
+app.use(express.static(path.join(__dirname, "build")));
+// if a call goes to api use api router
 app.use("/api", apiRouter);
-
-// app.use(express.static(path.join(__dirname, "/client/build")));
-// app.get("/*", (req, res) => {
-//   res.sendFile(path.join(__dirname + "/client/build/index.html"));
-// });
-
-// app.user("/:slug/", editionRouter);
-
-// const videoLink = daily.createRoom().then(res => {
-//   console.log("video link", res);
-// });
+// else use the client from the build folder.
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
 
