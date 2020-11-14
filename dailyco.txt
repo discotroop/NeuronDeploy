@@ -1,0 +1,7 @@
+https://docs.daily.co/reference#domain-configuration
+
+create rooms from api calls then figure out how to style them following the react
+blog post
+
+react side 
+https://www.daily.co/blog/building-a-custom-video-chat-app-with-react/

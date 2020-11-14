@@ -1,0 +1,18 @@
+IMPORTANT: Check that date Times are being produced local to the user!
+
+1. Update Home Page:
+2. Pass Time Constraints to Daily Co Video
+3. Modify call to Google to prevent creation of hangout link
+4. Insert properly formatted dailyco/neuron link
+5. Set up files for deployment.
+    -- create a fork for this?
+    -- Test deployment:
+6. Go over front end Routing. Do the names make sensse ?
+7. Clean up database, start fresh.
+8. Fix all explicit routing issues... aka 'localhost'
+=> All paths should be relative and BASE URLS should be saved to .env or similar solution
+
+Nice to haves.
+1. Double check, can users put in the same email address over and over on the same article?
+--- if so stop that.
+2. Safe users emails + article links.

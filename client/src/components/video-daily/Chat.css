@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.Video-Frame {
+  min-height: 425px;
+  min-width: 375px;
+  width: 80%;
+  height: 80%;
+}
