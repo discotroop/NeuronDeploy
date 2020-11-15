@@ -199,7 +199,7 @@ class MeetingSelector extends React.Component {
           this.setState({
             apiResponse: res.data[0]
           });
-          console.log(this.state.apiResponse);
+          console.log("response", this.state.apiResponse);
         });
     }
   }
