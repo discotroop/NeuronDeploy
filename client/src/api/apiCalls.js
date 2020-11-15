@@ -4,10 +4,12 @@ import axios from "axios";
 
 const apiPort = process.env.PORT || 8000;
 
+console.log(axios.baseURL);
+
 // base URL to where API is running
 const api = axios.create({
   // localhost for development
-  baseURL: apiPort + "/api"
+  baseURL: axious.baseURL + "/api"
 });
 
 // Calls to newsletter
