@@ -7,7 +7,7 @@ const apiPort = process.env.PORT || 8000;
 // base URL to where API is running
 const api = axios.create({
   // localhost for development
-  baseURL: "./api"
+  baseURL: apiPort + "/api"
 });
 
 // Calls to newsletter
