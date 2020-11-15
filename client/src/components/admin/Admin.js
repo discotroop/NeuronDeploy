@@ -36,7 +36,6 @@ class Admin extends React.Component {
       this.setState({
         newsletters: newsletters.data.data
       });
-      console.log(this.state.newsletters);
     });
   }
   // Call for data on component will mount

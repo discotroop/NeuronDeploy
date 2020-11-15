@@ -1,12 +1,10 @@
 export function getFromStorage(key) {
-  console.log(localStorage);
   if (!key) {
     return null;
   }
   try {
     const valueStr = localStorage.getItem(key);
     if (valueStr) {
-      console.log(JSON.parse(valueStr));
       return JSON.parse(valueStr);
     }
     return null;

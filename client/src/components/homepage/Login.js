@@ -36,18 +36,15 @@ class Login extends React.Component {
     const obj = getFromStorage("sessionToken");
     if (obj && obj.token) {
       const { token } = obj;
-      console.log(token);
       // Verify token
       apiCalls
         .verify({ token: token })
         .then(res => {
-          console.log(res);
           let data = res.data;
 
           return data;
         })
         .then(data => {
-          console.log(data);
           if (data) {
             this.setState({
               token: token,
@@ -65,11 +62,9 @@ class Login extends React.Component {
         isLoading: false
       });
     }
-    console.log(this.state.token);
   }
 
   handleSignIn() {
-    console.log(this.state);
     const { signInEmail, signInPassword } = this.state;
     this.setState({
       isLoading: true
@@ -81,7 +76,6 @@ class Login extends React.Component {
         return data;
       })
       .then(data => {
-        console.log("data", data);
         if (data) {
           setInStorage("sessionToken", { token: data.token });
           this.setState({
@@ -91,7 +85,6 @@ class Login extends React.Component {
             signInEmail: "",
             token: data.token
           });
-          console.log(this.props.history);
           this.props.history.push("/admin");
         } else {
           this.setState({
@@ -117,7 +110,6 @@ class Login extends React.Component {
         </div>
       );
     }
-    console.log(this.state.token);
     if (!this.state.token) {
       return (
         <div>
