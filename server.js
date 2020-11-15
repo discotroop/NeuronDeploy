@@ -35,12 +35,12 @@ mongoose
   .catch(err => console.log(err));
 
 // pull in client from the build folder
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "/client/build")));
 // if a call goes to api use api router
 app.use("/api", apiRouter);
 // else use the client from the build folder.
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
