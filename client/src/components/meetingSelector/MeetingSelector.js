@@ -81,6 +81,10 @@ class MeetingSelector extends React.Component {
     let location = this.props.location.pathname;
     let params = this.props.location.pathname.split("/");
     // clear empty string from params array.
+
+    // set base url to handle matching problem?
+    let base = params[0];
+    console.log(base);
     params = params.slice(1);
 
     ///// EMAIL /////
@@ -240,6 +244,7 @@ class MeetingSelector extends React.Component {
     // this pushes the new times too the article which will check
     // them and either match them or place them in the unmatched array
     // see api/controllers/articleController to see logic.
+    console.log("article id", articleID);
     apiCalls.updateArticleById(articleID, { unMatched });
 
     // reset selected times to nil.
@@ -286,6 +291,7 @@ class MeetingSelector extends React.Component {
     } else {
       console.log("results", results);
       this.checkForUserEmail(results);
+      console.log(this.state.apiResponse._id);
       this.postTimesToAPI(results, this.state.apiResponse._id);
     }
   }

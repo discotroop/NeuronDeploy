@@ -9,7 +9,7 @@ console.log(axios.baseURL);
 // base URL to where API is running
 const api = axios.create({
   // localhost for development
-  baseURL: axious.baseURL + "/api"
+  baseURL: axios.baseURL + "/api"
 });
 
 // Calls to newsletter
