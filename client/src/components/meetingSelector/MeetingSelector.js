@@ -192,6 +192,7 @@ class MeetingSelector extends React.Component {
         });
     } else {
       // fetch data from api based on custom URL aka the old way
+      console.log(`../../../api${location}`);
       fetch(`../../../api${location}`)
         .then(res => res.json())
         .then(res => {
