@@ -12,7 +12,7 @@ class EditionDeleteButton extends React.Component {
   };
 
   render() {
-    return <button onClick={() => this.props.handleDelete()}> X </button>;
+    return <button onClick={() => this.handleDelete()}> X </button>;
   }
 }
 
