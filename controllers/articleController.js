@@ -92,7 +92,6 @@ updateArticle = async (req, res) => {
             alreadyMatchedEmails.filter(function(email) {
               return email === matchedEmail;
             });
-          // console.log(filterEmails());
 
           // Check for time slot matches in days that match.
           for (let i = 0; i < matchedByDay.length; i++) {
