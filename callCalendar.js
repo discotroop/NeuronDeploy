@@ -30,7 +30,7 @@ const createCalendarEvent = function(eventData) {
       // Will need to edit localhost at some point
       description:
         "Meeting Link: " +
-        `https://fierce-sea-70572.herokuapp.com/chat/` +
+        `neuron.chat/chat/` +
         `${res.name}` +
         "\n" +
         "\n" +
