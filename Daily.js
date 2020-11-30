@@ -32,17 +32,18 @@ function createRoom(eventData) {
   // Set Time Data to Seconds and add/subtract five minutes.
   let start = new Date(eventData.dtStart);
   let end = new Date(eventData.dtEnd);
-  let startSeconds = start.getTime() - 300;
-  let endSeconds = end.getTime() + 300;
+  let startSeconds = start.getTime() / 1000 - 300;
+  let endSeconds = end.getTime() / 1000 + 300;
   console.log(startSeconds, endSeconds);
 
   let options = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer a4e7868ee8548e4fb5137d444f8d6fa0cc2b0b64bd5610e000651fd97e547544`
+      Authorization:
+        "Bearer a4e7868ee8548e4fb5137d444f8d6fa0cc2b0b64bd5610e000651fd97e547544"
     },
-    body: `{"properties":{"nbf": ${startSeconds}, "exp": ${endSeconds}}`
+    body: `{"properties":{"nbf":${startSeconds},"exp":${endSeconds}}}`
   };
 
   return fetch(url, options)
