@@ -40,10 +40,10 @@ function createRoom(eventData) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer a4e7868ee8548e4fb5137d444f8d6fa0cc2b0b64bd5610e000651fd97e547544`,
-      nbf: startSeconds,
-      exp: endSeconds
-    }
+      Authorization:
+        "Bearer a4e7868ee8548e4fb5137d444f8d6fa0cc2b0b64bd5610e000651fd97e547544"
+    },
+    body: `{"properties":{"nbf":${startSeconds},"exp":${endSeconds}}}`
   };
 
   return fetch(url, options)
