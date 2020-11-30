@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./howitworks.png";
 
-
 class MeetingDescription extends React.Component {
   constructor(props) {
     super(props);
@@ -13,10 +12,10 @@ class MeetingDescription extends React.Component {
   render() {
     return (
       <div>
-        <h2><b>Choose your availability</b></h2>
-        <p className="text-secondary">
+        <h2>Live 30-Minute Conversations with Readers</h2>
+        <p className="text-secondary pb-5">
           {" "}
-          Please select at least 2. Times are local to you.{" "}
+          Choose your availability. Please select at least 2. Times are local to you.{" "}
         </p>
       </div>
     );

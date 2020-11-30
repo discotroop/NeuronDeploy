@@ -18,7 +18,7 @@ const calendar = google.calendar({ version: "v3", auth: oAuth2Client });
 // Add a link to the google API documentaton for the parameters here.
 const createCalendarEvent = function(eventData) {
   console.log(eventData.videoID);
-  console.log(videoLinkForEmail);
+  //console.log(videoLinkForEmail);
 
   // pass in NBF and EXP to limit entry and exit time from rooms
   // Take eventData.dtStart and dtEnd and convert to correct form to pass to

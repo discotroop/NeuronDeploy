@@ -10,6 +10,8 @@ import Graphic from "./Graphic";
 import { DateTime } from "luxon";
 import ReactModal from "react-modal";
 
+import FrontendNav from "../frontend_nav/FrontendNav";
+
 // see ../../api/apiCalls for options
 import apiCalls from "../../api/apiCalls";
 
@@ -351,13 +353,10 @@ class MeetingSelector extends React.Component {
   render() {
     return (
       <div className="news-container">
-        <div className="row mx-auto">
-          <div className="col-md-8 m-auto center-block">
+        <FrontendNav />
+        <div className="row mx-auto bottom_buffer">
+          <div className="col-md-10 m-auto center-block">
             <div className="card card-body text-center">
-              <div className="text-center mx-auto">
-                {/* <FontAwesomeIcon icon={faBroadcastTower} size="5x" /> */}
-              </div>
-              <Graphic />
               <MeetingDescription
                 articleName={this.state.apiResponse.title}
                 newsletter={this.state.apiResponse.newsletter_title}
@@ -381,24 +380,23 @@ class MeetingSelector extends React.Component {
                   </div>
                 </ReactModal>
               </div>
-              <TimeSelector
-                dates={this.state.dates}
-                timeHandler={this.timeSelectorHandler}
-                dismiss={this.dismissErrors}
-              />
-              <Errors
-                errors={this.state.errors}
-                display={this.state.displayErrors}
-                dismiss={this.dismissErrors}
-              />
-              <Email
-                input={this.emailInputHandler}
-                dismiss={this.dismissErrors}
-              />
-              <SubmitButton
-                submit={this.submitHandler}
-                dismiss={this.dismissErrors}
-              />
+              <div>
+                <TimeSelector
+                  dates={this.state.dates}
+                  timeHandler={this.timeSelectorHandler}
+                  dismiss={this.dismissErrors}
+                />
+                <Errors
+                  errors={this.state.errors}
+                  display={this.state.displayErrors}
+                  dismiss={this.dismissErrors}
+                />
+                <SubmitButton
+                  submit={this.submitHandler}
+                  input={this.emailInputHandler}
+                  dismiss={this.dismissErrors}
+                />
+              </div>
             </div>
           </div>
         </div>

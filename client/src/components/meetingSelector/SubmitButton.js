@@ -10,17 +10,25 @@ class SubmitButton extends React.Component {
     this.props.dismiss();
     this.props.submit();
   };
+  handleInput(e) {
+    this.props.input(e.target.value);
+  }
   render() {
     return (
-      <div className="m-4">
-        <button
-          className="btn btn-warning btn-block w-50 mx-auto"
-          onClick={() => this.handleSubmit()}
-        >
-          {" "}
-          Submit{" "}
-        </button>
-      </div>
+        <form class="form-inline d-flex justify-content-center">
+          <div class="input-group mb-3">
+            <input type="email" name="email" id="email" type="text" class="form-control" placeholder="example@email.com" aria-label="Submit" aria-describedby="basic-addon1" onInput={e => this.handleInput(e)}></input>
+            <div class="input-group-append">
+              <button
+                className="btn btn-warning btn-block"
+                onClick={() => this.handleSubmit()}
+              >
+                {" "}
+                Submit{" "}
+              </button>
+            </div>
+          </div>
+        </form>
     );
   }
 }

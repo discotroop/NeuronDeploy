@@ -18,7 +18,7 @@ class TimeSelector extends React.Component {
   }
   render() {
     return (
-      <div className="time-selection">
+      <div className="time-selection pb-5">
         <div className="container">
           <div className="row">
             <TimeColumn

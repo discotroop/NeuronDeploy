@@ -13,6 +13,7 @@ import { useAuthDataContext } from "./components/utils/Auth";
 import Verify from "./components/utils/Verify";
 import Chat from "./components/video-daily/Chat";
 
+
 const PrivateRoute = ({ component, ...options }) => {
   const auth = Verify();
   console.log("auth", auth);
