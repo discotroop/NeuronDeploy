@@ -12,7 +12,7 @@ class MeetingDescription extends React.Component {
   render() {
     return (
       <div>
-        <h2>Live 30-Minute Conversations with Readers</h2>
+        <h2 className="header">Live 30-Minute Conversations with Readers</h2>
         <p className="text-secondary pb-5">
           {" "}
           Choose your availability. Please select at least 2. Times are local to you.{" "}

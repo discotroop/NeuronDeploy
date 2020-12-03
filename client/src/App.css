@@ -3,9 +3,8 @@
   width: 100;
   height: 100vh;
   background-color: #e8e8e8;
-  font-family: Comfortaa;
 }
-@import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
+
 
 
 ​
@@ -49,6 +48,10 @@
   margin: auto;
   width: 90%;
 }
+
+.header{
+  font-family: Comfortaa;
+}
 @import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
 
 .bottom_buffer{
@@ -64,6 +67,11 @@
 
 .text-secondary{
   font-family: 'Asap';
+  color: grey;
   padding: 25px;
 }
 @import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
+
+.ts{
+  
+}

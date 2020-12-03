@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4488f0a.chunk.css",
-    "main.js": "/static/js/main.a79f666d.chunk.js",
-    "main.js.map": "/static/js/main.a79f666d.chunk.js.map",
+    "main.css": "/static/css/main.fe306549.chunk.css",
+    "main.js": "/static/js/main.845c4239.chunk.js",
+    "main.js.map": "/static/js/main.845c4239.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.d45fca14.chunk.css": "/static/css/2.d45fca14.chunk.css",
     "static/js/2.953ff961.chunk.js": "/static/js/2.953ff961.chunk.js",
     "static/js/2.953ff961.chunk.js.map": "/static/js/2.953ff961.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.18d82454998ad4d47ffefeddc3b22ccd.js": "/precache-manifest.18d82454998ad4d47ffefeddc3b22ccd.js",
+    "precache-manifest.c69fc7fc921f492adef67898d58dd6a4.js": "/precache-manifest.c69fc7fc921f492adef67898d58dd6a4.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d45fca14.chunk.css.map": "/static/css/2.d45fca14.chunk.css.map",
-    "static/css/main.c4488f0a.chunk.css.map": "/static/css/main.c4488f0a.chunk.css.map",
+    "static/css/main.fe306549.chunk.css.map": "/static/css/main.fe306549.chunk.css.map",
     "static/js/2.953ff961.chunk.js.LICENSE.txt": "/static/js/2.953ff961.chunk.js.LICENSE.txt",
     "static/media/NeuronLogo.png": "/static/media/NeuronLogo.20b5b465.png",
     "static/media/guidelines.jpg": "/static/media/guidelines.98994430.jpg",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.d45fca14.chunk.css",
     "static/js/2.953ff961.chunk.js",
-    "static/css/main.c4488f0a.chunk.css",
-    "static/js/main.a79f666d.chunk.js"
+    "static/css/main.fe306549.chunk.css",
+    "static/js/main.845c4239.chunk.js"
   ]
 }

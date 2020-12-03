@@ -364,6 +364,7 @@ class MeetingSelector extends React.Component {
                 firstDate={this.state.dates.first.name}
                 thirdDate={this.state.dates.third.name}
               />
+
               <div>
                 <ReactModal
                   isOpen={this.state.showModal}
@@ -380,23 +381,22 @@ class MeetingSelector extends React.Component {
                   </div>
                 </ReactModal>
               </div>
-              <div>
-                <TimeSelector
-                  dates={this.state.dates}
-                  timeHandler={this.timeSelectorHandler}
-                  dismiss={this.dismissErrors}
-                />
-                <Errors
-                  errors={this.state.errors}
-                  display={this.state.displayErrors}
-                  dismiss={this.dismissErrors}
-                />
-                <SubmitButton
-                  submit={this.submitHandler}
-                  input={this.emailInputHandler}
-                  dismiss={this.dismissErrors}
-                />
-              </div>
+
+              <TimeSelector className="text-left"
+                dates={this.state.dates}
+                timeHandler={this.timeSelectorHandler}
+                dismiss={this.dismissErrors}
+              />
+              <Errors
+                errors={this.state.errors}
+                display={this.state.displayErrors}
+                dismiss={this.dismissErrors}
+              />
+              <SubmitButton
+                submit={this.submitHandler}
+                input={this.emailInputHandler}
+                dismiss={this.dismissErrors}
+              />
             </div>
           </div>
         </div>
