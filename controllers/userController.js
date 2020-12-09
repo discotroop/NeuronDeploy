@@ -1,6 +1,6 @@
 const User = require("../models/users");
 const express = require("express");
-const bcrypt = require("bcryptjs");
+const bcryptjs = require("bcryptjs");
 const passport = require("passport");
 const UserSession = require("../models/UserSession");
 // Load User model

@@ -16,7 +16,7 @@ class SubmitButton extends React.Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit} class="form-inline d-flex justify-content-center">
+      <form onSubmit={this.handleSubmit} class="form-inline justify-content-center">
         <div class="input-group mb-3">
           <input type="email" name="email" id="email" type="text" class="form-control" placeholder="me@email.com" aria-label="Submit" aria-describedby="basic-addon1" onInput={e => this.handleInput(e)}></input>
           <div class="input-group-append">

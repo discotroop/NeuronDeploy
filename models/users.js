@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 
 // All users will require and email and a userType
 // Three types, Admin, Author, Participant
@@ -28,12 +28,12 @@ const UserSchema = new Schema({
 
 // Generate hashed password
 UserSchema.methods.generateHash = function(password) {
-  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+  return bcryptjs.hashSync(password, bcryptjs.genSaltSync(8), null);
 };
 
 // Check password validity
 UserSchema.methods.validPassword = function(password) {
-  return bcrypt.compareSync(password, this.password);
+  return bcryptjs.compareSync(password, this.password);
 };
 
 module.exports = mongoose.model("User", UserSchema);
