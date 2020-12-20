@@ -68,27 +68,6 @@ const apiHelper = (method, endpoint, body = {}) => {
   return response.data;
 };
 
-// const apiHelper = async (method, endpoint, body = {}) => {
-//   try {
-//     const response = await apiDaily
-//       .request({
-//         url: endpoint,
-//         method: method,
-//         data: body
-//       })
-//       .then(() => {
-//         console.log("hello");
-//         return response;
-//       });
-//     // return response;
-//   } catch (error) {
-//     // console.log("Status: ", error.response.status);
-//     // console.log("Text: ", error.response.statusText);
-//     // need to throw again so error is caught
-//     // a possible improvement here is to pass the status code back so it can be returned to the user
-//     throw new Error(error);
-//   }
-// };
 
 module.exports = {
   createRoom
