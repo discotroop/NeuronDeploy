@@ -1,29 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.fe306549.chunk.css",
-    "main.js": "/static/js/main.7f641671.chunk.js",
-    "main.js.map": "/static/js/main.7f641671.chunk.js.map",
+    "main.css": "/static/css/main.9775f93f.chunk.css",
+    "main.js": "/static/js/main.056b9e00.chunk.js",
+    "main.js.map": "/static/js/main.056b9e00.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.d45fca14.chunk.css": "/static/css/2.d45fca14.chunk.css",
-    "static/js/2.953ff961.chunk.js": "/static/js/2.953ff961.chunk.js",
-    "static/js/2.953ff961.chunk.js.map": "/static/js/2.953ff961.chunk.js.map",
+    "static/js/2.bcc51798.chunk.js": "/static/js/2.bcc51798.chunk.js",
+    "static/js/2.bcc51798.chunk.js.map": "/static/js/2.bcc51798.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3c0fa868608790f60f7c1e9d3fcc9605.js": "/precache-manifest.3c0fa868608790f60f7c1e9d3fcc9605.js",
+    "precache-manifest.7ae74302728ce1aa605f371566bc16da.js": "/precache-manifest.7ae74302728ce1aa605f371566bc16da.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d45fca14.chunk.css.map": "/static/css/2.d45fca14.chunk.css.map",
-    "static/css/main.fe306549.chunk.css.map": "/static/css/main.fe306549.chunk.css.map",
-    "static/js/2.953ff961.chunk.js.LICENSE.txt": "/static/js/2.953ff961.chunk.js.LICENSE.txt",
+    "static/css/main.9775f93f.chunk.css.map": "/static/css/main.9775f93f.chunk.css.map",
+    "static/js/2.bcc51798.chunk.js.LICENSE.txt": "/static/js/2.bcc51798.chunk.js.LICENSE.txt",
     "static/media/NeuronLogo.png": "/static/media/NeuronLogo.20b5b465.png",
     "static/media/guidelines.jpg": "/static/media/guidelines.98994430.jpg",
     "static/media/howitworks.png": "/static/media/howitworks.e5c74cf3.png",
-    "static/media/intro.jpg": "/static/media/intro.708f8b79.jpg"
+    "static/media/intro.jpg": "/static/media/intro.708f8b79.jpg",
+    "static/media/rules.jpg": "/static/media/rules.8b4a1f81.jpg",
+    "static/media/splash.jpg": "/static/media/splash.d34fab90.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.d45fca14.chunk.css",
-    "static/js/2.953ff961.chunk.js",
-    "static/css/main.fe306549.chunk.css",
-    "static/js/main.7f641671.chunk.js"
+    "static/js/2.bcc51798.chunk.js",
+    "static/css/main.9775f93f.chunk.css",
+    "static/js/main.056b9e00.chunk.js"
   ]
 }

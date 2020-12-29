@@ -9,7 +9,6 @@ import Errors from "./Errors";
 import Graphic from "./Graphic";
 import { DateTime } from "luxon";
 import ReactModal from "react-modal";
-
 import FrontendNav from "../frontend_nav/FrontendNav";
 
 // see ../../api/apiCalls for options

@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { Safe } from "react-safe";
 // import Chat from "../chat/chat";
 // import { Home } from "../../App";
+import splash from "./splash.jpg";
+import howitworks from "./howitworks.png";
+import FrontendNav from "../frontend_nav/FrontendNav";
 
 // To do
 // build out smaller components for greater control
@@ -19,79 +22,38 @@ class Homepage extends React.Component {
   render() {
     return (
       <div className="homepage">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light py-0">
-          <a className="navbar-brand" href="/home">
-            <FontAwesomeIcon icon={faBroadcastTower} size="1.5x" />
-          </a>
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/faq">
-                FAQ
-              </a>
-            </li>
-            {/* add more links later */}
-          </ul>
-          <div className="my-lg-0">
-            <a className="btn btn-secondary btn-sm" href="/login">
-              {" "}
-              Login{" "}
-            </a>
-          </div>
-        </nav>
-
-        <div className="home-card-container py-3">
-          <div className="row mx-auto">
-            <div className="col-md-8 m-auto center-block">
+        <div className="home-card-container">
+            <img className="img-fluid" src={splash}></img>
+          
+            <div className="col-md-10 m-auto center-block">
               <div className="card card-body text-center">
-                <div className="text-center mx-auto">
-                  <FontAwesomeIcon icon={faBroadcastTower} size="5x" />
-                </div>
-                <h3 className="text-center mb-3 text-warning font-weight-bold">
+                <h4 className="small_header">
                   {" "}
-                  Neuron{" "}
-                </h3>
-                <hr></hr>
-                <div className="about">
-                  <h4 className="font-weight-bold"> About </h4>
-                  <p className="text-dark">
-                    {" "}
-                    Neuron is helping curious people engage with each other on
-                    the topics they care about ... Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.{" "}
-                  </p>
+                  The internet is a lonely place 
+                  {" "}
+                </h4>
+                <p className="body">
+                  {" "}
+                  It's filled with incredible content that never ends! Countless articles, blogs, YouTube videos, forums, courses, tutorials, and books about whatever you're curious about. This well of information and knowledge is why the average person spends 6 hours and 42 minutes on the internet everyday. But while there's more capivating content than you could ever absorb, it's a remarkably lonely journey. There's no one there to share your discoveries with or talk through a challenging concept with. While there are an infinite number of interesting tutorials to try, there's no one to help you debug, explain, elaborate when you get stuck. There are fascinating podcasts to listen to, but every-time you share an episode with your friends you don't get a response. We will spend a quarter of our lives on the internet, and unless something changes we will spend the majority of that quarter alone.
+                  {" "}
+                </p>
+                <h4 className="small_header">
+                  Neuron's mission is to connect people around shared interests 
+                </h4>
+                <div className="how-it-works py-5">
+                    <img className="img-fluid" src={howitworks}></img>
                 </div>
-                <hr></hr>
-                <div className="how-it-works">
-                  <h5 className="text-center font-weight-bold">
+
+                <div className="my-lg-0 py-3">
+                  <a className="btn-warning btn-primary btn-lg" href="/login">
                     {" "}
-                    How it works{" "}
-                  </h5>
-                  <div className="jumbotron"> graphic </div>
-                  <p>
-                    {" "}
-                    Possible further explanation of the graph ... Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum.{" "}
-                  </p>
+                    Creator Login{" "}
+                  </a>
                 </div>
               </div>
-            </div>
+            </div>  
           </div>
         </div>
-      </div>
     );
   }
 }

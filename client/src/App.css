@@ -1,13 +1,10 @@
 .App {
   text-align: center;
   width: 100;
-  height: 100vh;
+  height: 100%;
   background-color: #e8e8e8;
 }
 
-
-
-​
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -44,13 +41,23 @@
 }
 ​
 .news-container {
-  text-align: center;
+  text-align: left;
   margin: auto;
-  width: 90%;
 }
 
 .header{
   font-family: Comfortaa;
+  padding-top: 45px;
+  font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
+
+.small_header{
+  font-family: Comfortaa;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: bold;
+  color: black;
 }
 @import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
 
@@ -60,9 +67,8 @@
 
 .img{
   max-width: 25%;
-  height: auto;
   float: left;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .text-secondary{
@@ -72,6 +78,51 @@
 }
 @import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
 
-.ts{
-  
+.text-faq{
+  font-family: 'Asap';
+  color: black;
+  font-size: 18px;
+  padding-top: 60px;
+}
+@import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
+
+.text-faq2{
+  font-family: 'Asap';
+  color: black;
+  font-size: 18px;
+  padding-top: 100px;
+}
+@import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
+
+
+.text-list{
+  font-family: 'Asap';
+  color: black;
+  font-size: 18px;
+  padding-top: 25px;
+}
+@import url('https://fonts.googleapis.com/css?family=Asap|Comfortaa');
+
+.center{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 75px;
+  height: 75px;
+}
+
+.center-logo{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100px;
+  height: 35px;
+} 
+
+.rounded{
+  border-radius: 100px;
 }

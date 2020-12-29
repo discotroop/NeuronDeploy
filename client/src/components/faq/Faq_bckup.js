@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "./intro.jpg";
 import guidelines from "./guidelines.jpg";
-import rules from "./rules.jpg";
-import FrontendNav from "../frontend_nav/FrontendNav";
-import googlecalendaricon from "./google_cal_icon.png";
-import arrow from "./arrow.png";
 
 class Faq extends React.Component {
   constructor(props) {
@@ -22,60 +18,29 @@ class Faq extends React.Component {
   render() {
     return (
       <div className="news-container">
-        <FrontendNav />
-        <div className="row mx-auto bottom_buffer">
-          <div className="col-md-10 m-auto">
-            <div className="card card-body text-center">
-              <h2 className="header">Wahoo! Get ready to connect and discuss!</h2>
-              <p>{" "}</p>
-              <p className="text-faq">
-                We'll send you a calendar invite as soon as you're matched!
-              </p>
-              <img className="center" src={googlecalendaricon}></img>
-              <p className="text-faq2">
-                Prepare for the discussion
-              </p>
-              <img className="center-logo" src={arrow}></img>
-
-            </div>
-          </div>
-        </div>
-
-        <div className="row mx-auto bottom_buffer">
-          <div className="col-md-7 m-auto">
-            <div className="card card-body">
-              <h2 className="header text-center">Preparing for the discussion</h2>
-              <ol>
-                <li className="text-list text-left">Read the article</li>
-                <li className="text-list text-left">Highlight sentences you liked, disagreed with, or didn't understand </li>
-                <li className="text-list text-left">Connect with other content or personal experiences</li>
-                <li className="text-list text-left">Review the Discussion Guidelines and Community Rules</li>
-              </ol>
-              <div class="row">
-                <div class="col">
-                  <p className="text-faq2">
-                    Discussion Guidelines
-                  </p>
-                  <img className="center-logo" src={arrow}></img>
+        <div className="row mx-auto">
+          <div className="col-md-8 m-auto center-block">
+            <div className="card card-body text-left">
+              <div className="text-left mx-auto"></div>
+              <div className="faq-content">
+                <div className="links text-center">
+                  <a href="#guidelines" class="card-link text-warning">
+                    Guidelines
+                  </a>
+                  <a href="#values" class="card-link text-warning">
+                    Values
+                  </a>
+                  <a href="#rules" class="card-link text-warning">
+                    Rules
+                  </a>
+                  <a href="#contact" class="card-link text-warning">
+                    Contact
+                  </a>
                 </div>
-                <div class="col-5">
-                  <p className="text-faq2">
-                    Community Rules
-                  </p>
-                  <img className="center-logo" src={arrow}></img>
-                </div>
-              </div>
-            </div>
-          </div>   
-        </div>
-
-        <div className="row mx-auto bottom_buffer">
-          <div className="col-md-10 m-auto">
-            <div className="card card-body">
-              <div className="faq-content text-left">
-              <div id="guidelines">
+                <hr></hr>
+                <div id="guidelines">
                   <img className="img-fluid" src={guidelines}></img>
-                  <h3 className="small_header text-center"> Discussion Guidelines </h3>
+                  <h3 className="text-center"> Discussion Guidelines </h3>
                   <p>
                     {" "}
                     The goal is to learn, have fun, and meet new people with similar interests through semi-structured, 30-minute live discussions. The following guidelines will help you have an enjoyable, useful conversation.{" "}
@@ -116,10 +81,18 @@ class Faq extends React.Component {
                     </ul>
                   </p>
                 </div>
-              </div>
-              <div id="rules">
-                  <img className="img-fluid" src={rules}></img>
-                  <h3 className="small_header"> Rules </h3>
+                <div id="values">
+                  <h3 className="text-center"> Values </h3>
+                  <p> {" "}Creating a safe, beneficial, and supportive learning community is dependent on how well each person manages themselves in their interactions with others.{" "}</p>
+                  <ul className="text-left mx-auto">
+                    <li><b>Honor your commitments.</b> Your partner depends on you to show up on time, to have your video on, and to stay for your whole session.</li>
+                    <li><b>Be courteous.</b> Your partner is here to discuss a topic of interest, not delve into personal matters. Be professional. Stay on topic and consider what your partner may want to talk about. </li>
+                    <li><b>Be curious.</b> You can learn a lot from each other. Ask questions about your partners point of view as much as you ask questions of the content. </li>
+                    <li><b>Be kind.</b> Your partner is here to talk about something they’re passionate about and want to learn. Support and encourage them as they explore ideas, make connections, and grasp concepts.</li>
+                  </ul>
+                </div>
+                <div id="rules">
+                  <h3 className="text-center"> Rules </h3>
                   <p>{" "}These rules are to keep everyone safe. If you don’t feel safe or if someone breaks one of these rules, please contact us immediately. We’ve got your back. These rules apply to all interactions on Neuron.{" "}</p>
                   <h5 className="text-center">Breaking these rules will result in a ban:</h5>
                   <ol className="text-left mx-auto">
@@ -144,11 +117,14 @@ class Faq extends React.Component {
                     </li>
                   </ol>
                 </div>
+                <div id="contact" className="text-center">
+                  <h3 className="text-center">Contact Us</h3>
+                  Email: support@neuron.com
+                </div>
+              </div>
             </div>
-          </div>   
+          </div>
         </div>
-
-
       </div>
     );
   }

@@ -13,6 +13,7 @@ import Newsletters from "./Newsletters/Newsletters";
 import Editions from "./Editions/Editions";
 import Articles from "./Articles/Articles";
 import { getFromStorage } from "../utils/storage";
+import logo from "./NeuronLogo.png";
 
 // To Do:
 // handle newsletter creation
@@ -97,13 +98,10 @@ class Admin extends React.Component {
     return (
       <div className="homepage">
         <nav className="navbar navbar-expand-lg navbar-light bg-light py-0">
-          <a className="navbar-brand" href="/">
-            <FontAwesomeIcon icon={faBroadcastTower} size="1x" />
-          </a>
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/build">
-                Build Links
+              <a className="nav-link" href="home">
+                <img className="img" href="/home" src={logo}></img>
               </a>
             </li>
           </ul>
@@ -112,6 +110,11 @@ class Admin extends React.Component {
               <a className="nav-link" href="#">
                 <FontAwesomeIcon icon={faUserAstronaut} size="1x" />
                 Brendan
+              </a>
+            </li>
+            <li className="nav-item">
+              <a class="nav-link" href="/build">
+                Build Links
               </a>
             </li>
             <li className="nav-item">
@@ -124,7 +127,7 @@ class Admin extends React.Component {
         </nav>
         <div className="sidebar border-right py-2">
           <ul className="sidebar-nav">
-            <li className="nav-title border-bottom pb-2"> Admin Menu</li>
+            <li className="nav-title border-bottom pb-2"> Menu</li>
 
             <li className="nav-item py-2">
               <a
@@ -165,7 +168,6 @@ class Admin extends React.Component {
           </ul>
         </div>
         <div className="content">
-          <h5 className="py-2"> Admin Dashboard </h5>
           <div>{this.getComponent()}</div>
         </div>
       </div>

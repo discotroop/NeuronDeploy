@@ -3,12 +3,12 @@ const nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-            user: 'snowpeech@gmail.com',
-            pass: 'ftydaltgaohtuekq' //will need to imported variable from config file.
+            user: 'connector@neuron.chat',
+            pass: 'R=5mS7<a' //will need to imported variable from config file.
         }
     });  
 
-const senderEmail = 'snowpeech@gmail.com' // should change
+const senderEmail = 'connector@neuron.chat' // should change
 
 let reminderMail = {
     from: senderEmail, // sender address

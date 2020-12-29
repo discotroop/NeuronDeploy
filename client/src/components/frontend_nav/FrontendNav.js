@@ -21,18 +21,20 @@ class FrontendNav extends React.Component {
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-1">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <img className="img" src={logo}></img>
+              <a className="nav-link" href="home">
+                <img className="img" href="/home" src={logo}></img>
+              </a>                
             </li>
           </ul>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/home">
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                How it Works
+              <a className="nav-link" href="/login">
+                Login
               </a>
             </li>
           </ul>
