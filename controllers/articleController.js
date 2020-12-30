@@ -56,6 +56,7 @@ updateArticle = async (req, res) => {
 
   // here ?
   Article.findOne({ _id: req.params.id }, (err, article) => {
+    console.log(article);
     if (err) {
       return res.status(404).json({
         err,
@@ -75,10 +76,10 @@ updateArticle = async (req, res) => {
     //// !!!IMPORTANT!!! ////
     // check for passed in unMatched times
     if (body.unMatched) {
-      let alreadyMatchedEmails = []; /* array to hold emails of users that have already matched with new user */
       // If: there are no unmatched times simply add the new times to article.unMatched.
       if (article.unMatched.length === 0) {
         body.unMatched.forEach(match => article.unMatched.push(match));
+
         // Else: Look for potential matches
       } else {
         let newTimes = body.unMatched;
@@ -87,31 +88,73 @@ updateArticle = async (req, res) => {
           let matchedByDay = article.unMatched.filter(function(articleMatch) {
             return articleMatch.day === match.day;
           });
-          // Attempt to filter emails:
-          let filterEmails = matchedEmail =>
-            alreadyMatchedEmails.filter(function(email) {
-              return email === matchedEmail;
-            });
 
           // Check for time slot matches in days that match.
           for (let i = 0; i < matchedByDay.length; i++) {
-            // If times match and email does not match we have a match.
-            // Need to also filter for matching the same person more than once by email.
-            let checkForEmailRedundancy = filterEmails(matchedByDay[i].email);
+            // If times match and email does not match and the email has not previously been matched
+            // then we have a match.
             if (
               match.timeSlot === matchedByDay[i].timeSlot &&
               match.email !== matchedByDay[i].email &&
-              checkForEmailRedundancy.length === 0
+              match.isMatched === false
+              // checkForEmailRedundancy.length === 0
             ) {
               console.log("match", match.email);
               console.log("matchedby", matchedByDay[i].email);
               // Toggle Matched status on match
               match.isMatched = true;
               matchedByDay[i].isMatched = true;
-              console.log(matchedByDay[i]);
 
               // Add Matching emails to each matched item
               match.matchedEmail = matchedByDay[i].email;
+
+              // change isMatched to true for matched emails in article
+              let setArticleUnMatched = article.unMatched;
+              article.unMatched = [];
+              setArticleUnMatched.forEach(function(item) {
+                console.log(
+                  item.email,
+                  match.email,
+                  match.matchedEmail,
+                  "emails"
+                );
+                if (item.email === match.email) {
+                  item.isMatched = true;
+                }
+                if (item.email === matchedByDay[i].email) {
+                  item.isMatched = true;
+                }
+                article.unMatched.push(item);
+              });
+
+              // change isMatched to true for matched emails from body.
+              let setBodyUnMatched = body.unMatched;
+              body.unMatched = [];
+              setBodyUnMatched.forEach(function(item) {
+                console.log(
+                  item.email,
+                  match.email,
+                  match.matchedEmail,
+                  "emails"
+                );
+                if (item.email === match.email) {
+                  item.isMatched = true;
+                }
+                if (item.email === matchedByDay[i].email) {
+                  item.isMatched = true;
+                }
+                body.unMatched.push(item);
+              });
+
+              // set unMatched to only hold items with isMatched = false
+              let newUnmatched = article.unMatched.filter(function(matched) {
+                return matched.isMatched === false;
+              });
+              // Reset article to zero and repopulate. Otherwise it hangs on to matches it should not.
+              article.unMatched = [];
+              newUnmatched.forEach(function(item) {
+                article.unMatched.push(item);
+              });
 
               let videoSession = new VideoSession();
               videoSession.save();
@@ -126,27 +169,16 @@ updateArticle = async (req, res) => {
               };
               // CREATE CALENDAR EVENT
               createCalendarEvent(eventData);
-              alreadyMatchedEmails.push(matchedByDay[i].email);
-              console.log("already matched", alreadyMatchedEmails);
 
               // Push matched times to article.matched
-              // Only need to push one with matched email
               article.matched.push(match);
 
               // close loop
+              i = matchedByDay.length;
               break;
             }
             filteredEmailsArray = [];
           }
-          // set unMatched to only hold items with isMatched = false
-          let newUnmatched = article.unMatched.filter(function(matched) {
-            return matched.isMatched === false;
-          });
-          // Reset article to zero and repopulate. Otherwise it hangs on to matches it should not.
-          article.unMatched = [];
-          newUnmatched.forEach(function(item) {
-            article.unMatched.push(item);
-          });
         });
         // push any unmatched new items to unMatched
         // This is double parking... aka wrong!
